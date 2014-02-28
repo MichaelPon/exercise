@@ -1,0 +1,33 @@
+<h1>Contact Us</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile no</th>
+      <th>Message</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @form1s.each do |form1| %>
+      <tr>
+        <td><%= form1.name %></td>
+        <td><%= form1.email %></td>
+        <td><%= form1.mobileno %></td>
+        <td><%= form1.message %></td>
+        <td><%= link_to 'Show', form1 %></td>
+        <td><%#= link_to 'Edit', edit_form1_path(form1) %></td>
+        <td><%#= link_to 'Destroy', form1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create Form', new_form1_path %>

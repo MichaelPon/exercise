@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>   
+
+	Thank you for submitting your inquiry <%= @form1.name %>. A confirmation email has been sent to <%= @form1.email %> and a text message will be received in your mobile number (<%= @form1.mobileno %>).
+ <br><br>
+                Here’s the sent message:
+ <br>
+  <%= @form1.message %>
+
+</p>
+
+<%= link_to 'Back', form1s_path %>
